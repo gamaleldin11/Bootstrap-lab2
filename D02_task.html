@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Wireframe</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        /* Custom styles to mimic the wireframe's color palette and shapes */
+        body {
+            background-color: #f8f8ef; /* Beige background */
+            color: #333;
+        }
+        
+        .wireframe-box {
+            background-color: #c0c0b5; /* Gray box */
+            border-radius: 4px;
+        }
+        
+        .wireframe-line {
+            height: 8px;
+            background-color: #c0c0b5;
+            margin-bottom: 8px;
+            border-radius: 4px;
+        }
+        
+        .wireframe-line.short {
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .nav-circle {
+            background-color: #c0c0b5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .nav-circle.main {
+            width: 80px;
+            height: 80px;
+            background-color: #8c8c7f; /* Darker gray for the main top circle */
+        }
+
+        .nav-circle.sub {
+            width: 55px;
+            height: 55px;
+        }
+
+        /* Hover effect for clickable cards */
+        .clickable-card:hover {
+            cursor: pointer;
+            opacity: 0.8;
+            transition: 0.2s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid py-4 pb-5 mb-5">
+        <div class="row">
+            
+            <div class="col-12 col-lg-2 d-flex flex-column flex-md-row flex-lg-column align-items-center justify-content-md-around justify-content-lg-start mb-4 border-end-lg pe-lg-3 gap-3 gap-md-0 gap-lg-4">
+                
+                <div class="nav-circle main">Logo</div>
+                
+                <div class="d-flex flex-row flex-lg-column gap-3 gap-md-4 gap-lg-4">
+                    <div class="nav-circle sub"><i class="bi bi-list"></i></div>
+                    <div class="nav-circle sub"><i class="bi bi-person"></i></div>
+                    <div class="nav-circle sub"><i class="bi bi-envelope"></i></div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-10 px-md-4">
+                
+                <div class="mb-4">
+                    <div class="wireframe-line w-75"></div>
+                    <div class="wireframe-line w-100"></div>
+                    <div class="wireframe-line w-50"></div>
+                </div>
+
+                <div class="row mb-5">
+                    <div class="col-4"><div class="wireframe-box w-100" style="height: 120px;"></div></div>
+                    <div class="col-4"><div class="wireframe-box w-100" style="height: 120px;"></div></div>
+                    <div class="col-4"><div class="wireframe-box w-100" style="height: 120px;"></div></div>
+                </div>
+
+                <hr class="mb-4">
+
+                <div class="row text-center" id="cardAccordion">
+    
+    <div class="col-12 col-md-4 order-0 order-md-0 mb-4 clickable-card" data-bs-toggle="collapse" data-bs-target="#detail-1">
+        <div class="nav-circle sub mx-auto mb-3" style="background-color:#a3a396;"><i class="bi bi-star"></i></div>
+        <div class="wireframe-line"></div>
+        <div class="wireframe-line"></div>
+        <div class="wireframe-line short"></div>
+        <i class="bi bi-caret-down-fill text-secondary"></i>
+    </div>
+
+    <div class="col-12 order-1 order-md-3 collapse mb-4" id="detail-1" data-bs-parent="#cardAccordion">
+        <div class="text-start">
+            <h3 class="fst-italic border-bottom border-2 border-secondary pb-2 mb-3">Lorem (Card 1 Content)</h3>
+            <div class="row mb-3">
+                <div class="col-md-6 d-none d-md-block">
+                    <div class="wireframe-box d-flex justify-content-center align-items-center w-100 h-100 min-vh-25" style="min-height: 150px;">
+                        <i class="bi bi-play-fill display-1 text-secondary"></i>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 pt-2">
+                    <div class="wireframe-line w-100"></div>
+                    <div class="wireframe-line w-100"></div>
+                    <div class="wireframe-line w-75"></div>
+                    <br>
+                    <div class="wireframe-line w-100"></div>
+                    <div class="wireframe-line w-50"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4"><div class="wireframe-box w-100" style="height: 60px;"></div></div>
+                <div class="col-4"><div class="wireframe-box w-100" style="height: 60px;"></div></div>
+                <div class="col-4"><div class="wireframe-box w-100" style="height: 60px;"></div></div>
+            </div>
+        </div>
+        <hr class="mt-4">
+    </div>
+
+
+    <div class="col-12 col-md-4 order-2 order-md-1 mb-4 clickable-card" data-bs-toggle="collapse" data-bs-target="#detail-2">
+        <div class="nav-circle sub mx-auto mb-3" style="background-color:#a3a396;"><i class="bi bi-heart"></i></div>
+        <div class="wireframe-line"></div>
+        <div class="wireframe-line"></div>
+        <div class="wireframe-line short"></div>
+        <i class="bi bi-caret-down-fill text-secondary"></i>
+    </div>
+
+    <div class="col-12 order-3 order-md-4 collapse mb-4" id="detail-2" data-bs-parent="#cardAccordion">
+        <div class="text-start">
+            <h3 class="fst-italic border-bottom border-2 border-secondary pb-2 mb-3">Lorem (Card 2 Content)</h3>
+            <div class="row mb-3">
+                <div class="col-md-6 d-none d-md-block">
+                    <div class="wireframe-box d-flex justify-content-center align-items-center w-100 h-100 min-vh-25" style="min-height: 150px;">
+                        <i class="bi bi-play-fill display-1 text-secondary"></i>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 pt-2">
+                    <div class="wireframe-line w-100"></div>
+                    <div class="wireframe-line w-75"></div>
+                    <br>
+                    <div class="wireframe-line w-100"></div>
+                    <div class="wireframe-line w-100"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4"><div class="wireframe-box w-100" style="height: 60px;"></div></div>
+                <div class="col-4"><div class="wireframe-box w-100" style="height: 60px;"></div></div>
+                <div class="col-4"><div class="wireframe-box w-100" style="height: 60px;"></div></div>
+            </div>
+        </div>
+        <hr class="mt-4">
+    </div>
+
+
+    <div class="col-12 col-md-4 order-4 order-md-2 mb-4 clickable-card" data-bs-toggle="collapse" data-bs-target="#detail-3">
+        <div class="nav-circle sub mx-auto mb-3" style="background-color:#a3a396;"><i class="bi bi-lightning"></i></div>
+        <div class="wireframe-line"></div>
+        <div class="wireframe-line"></div>
+        <div class="wireframe-line short"></div>
+        <i class="bi bi-caret-down-fill text-secondary"></i>
+    </div>
+
+    <div class="col-12 order-5 order-md-5 collapse mb-4" id="detail-3" data-bs-parent="#cardAccordion">
+        <div class="text-start">
+            <h3 class="fst-italic border-bottom border-2 border-secondary pb-2 mb-3">Lorem (Card 3 Content)</h3>
+            <div class="row mb-3">
+                <div class="col-md-6 d-none d-md-block">
+                    <div class="wireframe-box d-flex justify-content-center align-items-center w-100 h-100 min-vh-25" style="min-height: 150px;">
+                        <i class="bi bi-play-fill display-1 text-secondary"></i>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 pt-2">
+                    <div class="wireframe-line w-75"></div>
+                    <div class="wireframe-line w-100"></div>
+                    <br>
+                    <div class="wireframe-line w-50"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4"><div class="wireframe-box w-100" style="height: 60px;"></div></div>
+                <div class="col-4"><div class="wireframe-box w-100" style="height: 60px;"></div></div>
+                <div class="col-4"><div class="wireframe-box w-100" style="height: 60px;"></div></div>
+            </div>
+        </div>
+        <hr class="mt-4">
+    </div>
+
+</div> ```
+
+By shifting the values down so the highest number is `5`, the browser correctly understands the sequence, and the 3rd card will now flawlessly expand downwards!
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
